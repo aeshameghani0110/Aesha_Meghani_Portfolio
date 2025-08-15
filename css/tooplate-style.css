@@ -638,3 +638,66 @@ b, strong {
     vertical-align: top;
   }
 }
+
+/* Project Hover Effects */
+.project-info {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.project-info img {
+  transition: all 0.3s ease;
+  width: 100%;
+  height: auto;
+}
+
+.project-info:hover img {
+  filter: blur(3px);
+  transform: scale(1.05);
+}
+
+.project-link-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 194, 0, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 24px;
+  transition: all 0.3s ease;
+  opacity: 0;
+  z-index: 10;
+}
+
+.project-info:hover .project-link-btn {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+.project-link-btn:hover {
+  background: rgba(255, 194, 0, 1);
+  transform: translate(-50%, -50%) scale(1.1);
+  color: #fff;
+}
+
+.project-link-btn:hover i {
+  opacity: 1 !important;
+  visibility: visible !important;
+  color: #fff !important;
+}
+
+.project-link-btn i {
+  font-size: 24px;
+  opacity: 1;
+  visibility: visible;
+  transition: none;
+}
